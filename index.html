@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="index.js"></script>
+        <title>PTE HTML</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div>
+            <h1>PTE HTML Test ENV</h1>
+            <script>
+                var elementals = [
+                    ["수소", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "헬륨"],
+                    ["리튬", "베릴륨", "", "", "", "", "", "", "", "", "", "", "붕소", "탄소", "질소", "산소", "플루오린", "네온"],
+                    ["나트륨", "마그네슘", "", "", "", "", "", "", "", "", "", "", "알루미늄", "규소", "인", "황", "염소", "아르곤"],
+                    ["칼륨", "칼슘", "스칸듐", "티타늄", "바나듐", "크로뮴", "망가니즈", "철", "코발트", "니켈", "구리", "아연", "갈륨", "저마늄", "비소", "셀레늄", "브로민", "크립톤"],
+                    ["루비듐", "스트론튬", "이트륨", "지크로늄", "니오브", "몰리브덴", "테크네튬", "루테늄", "쿠듐", "팔라듐", "은", "카드뮴", "인듐", "주석", "안티몬", "텔루륨", "아이오딘", "제논"],
+                    ["세슘", "바륨", "란타넘족", "하프늄", "탄탈륨", "텅스텐", "레늄", "오스뮴", "이리듐", "백금", "금", "수은", "틸륨", "납", "비스무스", "폴로늄", "아스타틴", "라돈"],
+                    ["프랑슘", "라듐", "악티눔족", "러더포늄", "어브뮴", "시보귬", "보륨", "하슘", "파이트너륨", "다름슈타틈", "뢴트게늄", "코페르니슘", "니호늄", "플뢰로븀", "모스크븀", "리버모륨", "테네신", "오가네손"]
+                ]
+
+                function addTable() {
+                    var c, r, t;
+                    t = document.createElement('table');
+                    var k1 = 1;
+                    var k2 = 1;
+                    while (k2 < 8) {
+                        r = t.insertRow(k2-1);
+                        while (k1 < 19) {
+                            c = r.insertCell(k1-1);
+                            buttonnew = document.createElement('button');
+                            buttonnew.innerHTML = elementals[k2-1][k1-1];
+                            c.appendChild(buttonnew);
+                            k1+=1;
+                        }
+                        k1=1;
+                        k2+=1;
+                    }
+                    document.getElementById("addtable").appendChild(t);
+                }
+            </script>
+            <div id="addtable">
+                <button onclick="addTable()">Show table</button>
+                <br><br><br>
+            </div>
+
+        </div>
+    </body>
+</html>
