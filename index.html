@@ -19,9 +19,21 @@
                     ["프랑슘", "라듐", "악티눔족", "러더포늄", "어브뮴", "시보귬", "보륨", "하슘", "파이트너륨", "다름슈타틈", "뢴트게늄", "코페르니슘", "니호늄", "플뢰로븀", "모스크븀", "리버모륨", "테네신", "오가네손"]
                 ]
 
+                var isOp = 0;
+
+                function renderT() {
+                    if (isOp === 0) {
+                        addTable();
+                    }
+                    else {
+                        remTable();
+                    }
+                }
+
                 function addTable() {
                     var c, r, t;
                     t = document.createElement('table');
+                    t.id = "tableB";
                     var k1 = 1;
                     var k2 = 1;
                     while (k2 < 8) {
@@ -37,10 +49,22 @@
                         k2+=1;
                     }
                     document.getElementById("addtable").appendChild(t);
+                    isOp = 1;
+                }
+                
+                function remTable() {
+                    var d = document.getElementById("addtable");
+                    var tb = document.getElementById("tableB");
+                    d.removeChild(tb);
+                    isOp = 0;
+                }
+
+                function removeSome() {
+                    // remove blank stuff
                 }
             </script>
             <div id="addtable">
-                <button onclick="addTable()">Show table</button>
+                <button onclick="renderT()">Show table</button>
                 <br><br><br>
             </div>
 
