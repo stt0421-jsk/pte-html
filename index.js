@@ -96,7 +96,7 @@ function addA() {
         while (k1 < 16) {
             c = r.insertCell(k1-1);
             buttonnew = document.createElement('button');
-            buttonnew.innerHTML = lans[k1-1];
+            buttonnew.innerHTML = acts[k1-1];
             k1+=1;
             c.appendChild(buttonnew);
         }
